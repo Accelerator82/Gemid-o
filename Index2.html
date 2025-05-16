@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gemidão do Zap</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f0f0;
+        }
+        .btn {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vídeo Importante</h1>
+    <button class="btn" id="playBtn">▶️ Clique para Assistir</button>
+    
+    <audio id="gemidao">
+        <source src="https://www.myinstants.com/media/sounds/gemidao-do-zap.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        document.getElementById('playBtn').addEventListener('click', function() {
+            var audio = document.getElementById('gemidao');
+            audio.play();
+            this.textContent = "🔊 Tocando...";
+        });
+    </script>
+</body>
+</html>
